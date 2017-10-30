@@ -6,6 +6,12 @@
 
 @include fancy-links;
 
+@include apply-to-ie-6 {
+	body {
+		font-size: 125%;
+	}
+}
+
 body {
   font-family: $text-font;
   color: $text-color;
@@ -29,17 +35,15 @@ p {
 
 a {
 	color: $link-color;
+
+	&:hover {
+		color: darken($link-color, 15%);
+	}
 }
 
 .warning-button {
 	@include warning;
 	padding: 8px 12px;
-}
-
-@include apply-to-ie-6 {
-	body {
-		font-size: 125%;
-	}
 }
 
 #header {
@@ -56,6 +60,14 @@ a {
 
 		a {
 			color: $menu-item-color;
+			padding: 6px 8px;
+			border-bottom: 1px solid transparentize(#fefefe, 1);
+			transition: border-bottom 0.5s;
+			transition-timing-function: ease-in-out;
+
+			&:hover {
+				border-bottom: 1px solid opacify(#fefefe, .5);
+			}
 		}
   }
   

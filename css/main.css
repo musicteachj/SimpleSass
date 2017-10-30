@@ -4,6 +4,9 @@ a {
   font-style: italic;
   text-decoration: none; }
 
+* html body {
+  font-size: 125%; }
+
 body {
   font-family: "Alegreya Sans", Arial, sans-serif;
   color: #222222; }
@@ -23,14 +26,15 @@ p {
 
 a {
   color: #f27731; }
+  a:hover {
+    color: #ca510d; }
 
 .warning-button {
   background-color: orange;
   color: #fff;
   padding: 8px 12px; }
-
-* html body {
-  font-size: 125%; }
+  .warning-button:hover {
+    background-color: #ffb733; }
 
 #header {
   border-radius: 12px;
@@ -43,7 +47,13 @@ a {
   #header #main-menu li {
     display: inline; }
   #header #main-menu a {
-    color: white; }
+    color: white;
+    padding: 6px 8px;
+    border-bottom: 1px solid rgba(254, 254, 254, 0);
+    transition: border-bottom 0.5s;
+    transition-timing-function: ease-in-out; }
+    #header #main-menu a:hover {
+      border-bottom: 1px solid #fefefe; }
 
 #main {
   width: 960px;

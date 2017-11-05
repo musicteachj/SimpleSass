@@ -7,10 +7,17 @@ a {
 * html body {
   font-size: 125%; }
 
+.error, .critical-error, .cta-button, .super-cta-button {
+  color: red; }
+
+.critical-error {
+  bottom: 1px solid red;
+  font-weight: bold; }
+
 body {
   font-family: "Alegreya Sans", Arial, sans-serif;
-  font-size: 1.125em;
-  color: #222222; }
+  color: #222222;
+  font-size: 1.125em; }
   @media only screen and (max-width: 960px) {
     body {
       font-size: 125%; } }
@@ -30,12 +37,19 @@ a {
   a:hover {
     color: #ca510d; }
 
-.warning-button {
+.warning-button, .cta-button, .super-cta-button {
   background-color: orange;
   color: #fff;
   padding: 8px 12px; }
-  .warning-button:hover {
+  .warning-button:hover, .cta-button:hover, .super-cta-button:hover {
     background-color: #ffb733; }
+
+.cta-button, .super-cta-button {
+  border-radius: 6px;
+  font-weight: bold; }
+
+.super-cta-button {
+  font-size: 1.25em; }
 
 #header {
   border-radius: 12px;
@@ -72,7 +86,7 @@ a {
     width: 23.25%; }
     #main #sidebar li {
       list-style-type: none;
-      padding: 16px 20px;
+      padding: 1em 1.25em;
       border-bottom: 1px dashed #999; }
       #main #sidebar li:hover {
         background-color: #efefef; }

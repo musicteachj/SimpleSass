@@ -53,13 +53,27 @@ a {
   }
 }
 
-.warning-button {
+%highlight {
+  font-style: italic;
+}
+
+.sub-title {
+  @extend %highlight;
+  @extend .foo !optional;
+  font-size: em(20px);
+}
+
+@mixin warning-button {
   @include warning;
   padding: 8px 12px;
 }
 
+.warning-button {
+  @include warning-button;
+}
+
 .cta-button {
-  @extend .warning-button;
+  @include warning-button;
   @extend .error;
   @include rounded;
   font-weight: bold;
